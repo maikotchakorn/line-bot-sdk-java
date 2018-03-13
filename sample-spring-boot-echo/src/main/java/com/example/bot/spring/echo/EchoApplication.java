@@ -37,10 +37,10 @@ public class EchoApplication {
     public TextMessage handleTextMessageEvent(MessageEvent<TextMessageContent> event) {
         System.out.println("event: " + event);
         return new TextMessage(event.getMessage().getText());
-    }*/
+    }
 
    @EventMapping
     public void handleDefaultMessageEvent(Event event) {
         System.out.println("event: " + event);
-    }
+    }*/
 }
