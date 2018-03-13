@@ -39,8 +39,8 @@ public class EchoApplication {
         return new TextMessage(event.getMessage().getText());
     }
 
-    @EventMapping
+   /* @EventMapping
     public void handleDefaultMessageEvent(Event event) {
         System.out.println("event: " + event);
-    }
+    }*/
 }
