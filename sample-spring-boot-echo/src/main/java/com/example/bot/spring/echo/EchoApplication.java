@@ -36,6 +36,11 @@ public class EchoApplication {
    @EventMapping
     public TextMessage handleTextMessageEvent(MessageEvent<TextMessageContent> event) {
         System.out.println("event: " + event);
+        System.out.println("debug: " + event.getMessage().getText().toLowerCase());
+        System.out.println("debug: " + event.getMessage().getText().toLowerCase().equals("uid"));
+        System.out.println("debug: " + event.getSource().getSenderId());
+        System.out.println("debug: " + event.getSource().getUserId());
+        
         if (event.getMessage().getText().toLowerCase().equals("uid")) {
             return new TextMessage(event.getSource().getUserId());
         }
